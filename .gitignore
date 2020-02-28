@@ -1,0 +1,50 @@
+*.pyc
+*~
+# Mercurial:
+.hg*
+# IntelliJ config files:
+/.idea
+# Eclipse config files:
+/.cproject
+/.project
+# QtCreator config files:
+/*.config
+/*.creator
+/*.creator.user
+/*.files
+/*.includes
+/*.autosave
+/CMakeLists.txt.user*
+# Mac Finder:
+.DS_Store
+# CLion/IntelliJ
+*cmake-build-debug
+.idea/*
+
+.vscode/*
+build/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Editor temp/backup files
+*~
