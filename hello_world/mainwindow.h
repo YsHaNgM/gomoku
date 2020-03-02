@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include <QPainter>
-#include <ranges>
+//#include <ranges>
+#include <vector>
 
 namespace Ui
 {
@@ -27,6 +28,7 @@ private:
     Ui::MainWindow *ui;
     const int board_size = 14;
     const int board_margin_distance = 30;
+    const int block_size = 40;
 };
 
 #endif // MAINWINDOW_H
