@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    const int board_size = 14;
+    const int board_size = 17;
     const int board_margin_distance = 30;
     const int block_size = 40;
 };

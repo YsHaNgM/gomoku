@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
                                           ui(new Ui::MainWindow)
 {
     setFixedSize(board_margin_distance * 2 + block_size * board_size, //width
-                     board_margin_distance * 2.5 + block_size * board_size);
+                     board_margin_distance * 2.5 + block_size * board_size); //height
     ui->setupUi(this);
 }
 
