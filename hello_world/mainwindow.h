@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QPainter>
 //#include <ranges>
+#include <cmath>
 #include <vector>
 
 namespace Ui
@@ -19,15 +20,16 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void paintEvent(QPaintEvent *event);
+    void mouseClick(QMouseEvent *);
 
 private slots:
     void on_actionExit_triggered();
 
 private:
     Ui::MainWindow *ui;
-    const int board_size = 16;
-    const int board_margin_distance = 30;
-    const int block_size = 40;
+    const int boardSize = 16;
+    const int boardMarginDistance = 30;
+    const int blockSize = 40;
 };
 
 #endif // MAINWINDOW_H

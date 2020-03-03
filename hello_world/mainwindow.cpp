@@ -4,8 +4,8 @@
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent),
                                           ui(new Ui::MainWindow)
 {
-    setFixedSize(board_margin_distance * 2 + block_size * board_size,  //width
-                 board_margin_distance * 2 + block_size * board_size); //height
+    setFixedSize(boardMarginDistance * 2 + blockSize * boardSize,  //width
+                 boardMarginDistance * 2 + blockSize * boardSize); //height
     ui->setupUi(this);
 }
 
@@ -24,19 +24,31 @@ void MainWindow::paintEvent(QPaintEvent *event)
     QPainter painter(this);
     painter.setRenderHint(QPainter::Antialiasing, true);
     std::vector<int> board_rel;
-    for (int i = 0; i < board_size + 1; ++i)
+    for (int i = 0; i < boardSize + 1; ++i)
     {
         board_rel.push_back(i);
     }
     for (auto i : board_rel)
+        boardMarginDistance
+        {
+            painter.drawLine(boardMarginDistance + blockSize * i,
+                             boardMarginDistance,
+                             boardMarginDistance + blockSize * i,
+                             size().height() - boardMarginDistance);
+            painter.drawLine(boardMarginDistance,
+                             boardMarginDistance + blockSize * i,
+                             size().width() - boardMarginDistance,
+                             boardMarginDistance + blockSize * i);
+        }
+}
+
+void MainWindow::mouseClick(QMouseEvent *event)
+{
+    if (event->x() >= boardMarginDistance && event->x() <= size().width() - boarMarginDistance &&
+        event->y() >= boardMarginDistance &&
+        event->y() <= size().height() - boardMarginDistance)
     {
-        painter.drawLine(board_margin_distance + block_size * i,
-                         board_margin_distance,
-                         board_margin_distance + block_size * i,
-                         size().height() - board_margin_distance);
-        painter.drawLine(board_margin_distance,
-                         board_margin_distance + block_size * i,
-                         size().width() - board_margin_distance,
-                         board_margin_distance + block_size * i);
+        auto xPosGrid = std::round(double(event->x()) / double(blockSize));
+        auto yPosGrid = std::round(double(event->y()) / double(blockSize));
     }
 }
