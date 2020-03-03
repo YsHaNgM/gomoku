@@ -18,15 +18,14 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void paintEvent(QPaintEvent * event);
-
+    void paintEvent(QPaintEvent *event);
 
 private slots:
     void on_actionExit_triggered();
 
 private:
     Ui::MainWindow *ui;
-    const int board_size = 17;
+    const int board_size = 16;
     const int board_margin_distance = 30;
     const int block_size = 40;
 };
