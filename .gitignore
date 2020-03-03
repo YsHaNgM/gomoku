@@ -21,7 +21,9 @@
 *cmake-build-debug
 .idea/*
 
+.vscode/
 .vscode/*
+**/.vscode
 build/
 
 # Compiled Object files
