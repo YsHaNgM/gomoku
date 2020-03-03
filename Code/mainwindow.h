@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QMouseEvent>
 #include <QPainter>
 //#include <ranges>
 #include <cmath>
@@ -20,7 +21,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void paintEvent(QPaintEvent *event);
-    void mouseClick(QMouseEvent *);
+    void mouseClick(QMouseEvent *event);
 
 private slots:
     void on_actionExit_triggered();

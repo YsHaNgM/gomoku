@@ -29,22 +29,21 @@ void MainWindow::paintEvent(QPaintEvent *event)
         board_rel.push_back(i);
     }
     for (auto i : board_rel)
-        boardMarginDistance
-        {
-            painter.drawLine(boardMarginDistance + blockSize * i,
-                             boardMarginDistance,
-                             boardMarginDistance + blockSize * i,
-                             size().height() - boardMarginDistance);
-            painter.drawLine(boardMarginDistance,
-                             boardMarginDistance + blockSize * i,
-                             size().width() - boardMarginDistance,
-                             boardMarginDistance + blockSize * i);
-        }
+    {
+        painter.drawLine(boardMarginDistance + blockSize * i,
+                         boardMarginDistance,
+                         boardMarginDistance + blockSize * i,
+                         size().height() - boardMarginDistance);
+        painter.drawLine(boardMarginDistance,
+                         boardMarginDistance + blockSize * i,
+                         size().width() - boardMarginDistance,
+                         boardMarginDistance + blockSize * i);
+    }
 }
 
 void MainWindow::mouseClick(QMouseEvent *event)
 {
-    if (event->x() >= boardMarginDistance && event->x() <= size().width() - boarMarginDistance &&
+    if (event->x() >= boardMarginDistance && event->x() <= size().width() - boardMarginDistance &&
         event->y() >= boardMarginDistance &&
         event->y() <= size().height() - boardMarginDistance)
     {

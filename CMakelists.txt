@@ -21,11 +21,11 @@ endif()
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(helloworld
-    mainwindow.ui
-    mainwindow.cpp
-    main.cpp
-    resources.qrc
-)
 
-target_link_libraries(helloworld Qt5::Widgets)
+
+
+message("CMAKE_SOURCE_DIR=${CMAKE_SOURCE_DIR}")
+
+
+include_directories(${CMAKE_SOURCE_DIR}/Code)
+add_subdirectory(${CMAKE_SOURCE_DIR}/Code)
