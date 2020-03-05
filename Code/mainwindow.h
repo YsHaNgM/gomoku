@@ -28,6 +28,8 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    int xPosGrid;
+    int yPosGrid;
     const int boardSize = 16;
     const int boardMarginDistance = 30;
     const int blockSize = 40;

@@ -47,7 +47,7 @@ void MainWindow::mouseClick(QMouseEvent *event)
         event->y() >= boardMarginDistance &&
         event->y() <= size().height() - boardMarginDistance)
     {
-        auto xPosGrid = std::round(double(event->x()) / double(blockSize));
-        auto yPosGrid = std::round(double(event->y()) / double(blockSize));
+        xPosGrid = std::round(double(event->x()) / double(blockSize));
+        yPosGrid = std::round(double(event->y()) / double(blockSize));
     }
 }
